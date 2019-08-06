@@ -5,7 +5,6 @@
     "database": "blocipedia-dev",
     "host": "127.0.0.1",
     "dialect": "postgres",
-    "operatorsAliases": false,
     "logging": false
   },
   "test": {
@@ -14,7 +13,6 @@
     "database": "blocipedia-test",
     "host": "127.0.0.1",
     "dialect": "postgres",
-    "operatorsAliases": false,
     "logging": false
   },
   "production": {
@@ -23,7 +21,6 @@
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "postgres",
-    "operatorsAliases": false,
     "logging": false,
     "use_env_variable": "DATABASE_URL"
   }
