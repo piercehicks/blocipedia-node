@@ -28,7 +28,7 @@ describe("routes : wikis", () => {
             }
           });
           Wiki.create({
-            title: "JavaScript",
+            title: "JavaScript Frameworks",
             body: "JS frameworks and fundamentals",
             userId: user.id
           })
@@ -107,7 +107,7 @@ describe("routes : wikis", () => {
     it("should delete the wiki with the associated ID", done => {
       Wiki.findAll().then(wikis => {
         const wikiCountBeforeDelete = wikis.length;
-        expect(wikiCountBeforeDelete).toBe(1);
+       expect(wikiCountBeforeDelete).toBe(1);
         request.post(`${base}${this.wiki.id}/destroy`, (err, res, body) => {
           Wiki.findAll()
             .then(wikis => {
