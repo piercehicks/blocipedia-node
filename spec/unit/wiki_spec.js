@@ -18,7 +18,7 @@ describe("Wiki", ()=>{
          role: "standard"
        })
        .then((user) => {
-         this.user = user; //store the user
+         this.user = user;
          Wiki.create({
           title: "JavaScript" ,
           body: "JS frameworks and fundamentals",
