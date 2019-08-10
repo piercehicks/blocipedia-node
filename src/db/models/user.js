@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
       role: {
         type: DataTypes.STRING,
         allowNull: false,
-        defaultValue: "member"
+        defaultValue: "standard"
       }
     },
     {}
@@ -39,9 +39,11 @@ module.exports = (sequelize, DataTypes) => {
     User.prototype.isOwner = function() {
       return this.role === "owner";
     };
-
-    User.prototype.isMember = function() {
-      return this.role === "member";
+User.prototype.isPremium = function(){
+  return this.role === "premium";
+}
+    User.prototype.isstandard = function() {
+      return this.role === "standard";
     };
   };
 
