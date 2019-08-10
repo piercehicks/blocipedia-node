@@ -29,7 +29,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      userId: { //Not part of original table creation
+      userId: {
         type: Sequelize.INTEGER,
         onDelete: "CASCADE",
         allowNull: false,
