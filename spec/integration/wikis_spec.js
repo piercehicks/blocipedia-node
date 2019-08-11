@@ -133,7 +133,6 @@ describe("routes : wikis", () => {
         const wikiCountBeforeDelete = wikis.length;
 
         expect(wikiCountBeforeDelete).toBe(1);
-
         request.post(`${base}${this.wiki.id}/destroy`, (err, res, body) => {
           Wiki.findAll()
             .then(wikis => {
