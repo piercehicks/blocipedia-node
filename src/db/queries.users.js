@@ -27,5 +27,32 @@ module.exports = {
       .catch(err => {
         callback(err);
       });
-  }
-};
+  },
+  upgrade(id) {
+      return User.findByPk(id)
+        .then(user => {
+          if (!user) {
+            return callback("User does not exist!");
+          } else {
+            return user.update({ role: "premium" });
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
+
+    downgrade(id) {
+      return User.findByPk(id)
+        .then(user => {
+          if (!user) {
+            return callback("User does not exist!");
+          } else {
+            return user.update({ role: "member" });
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
+  };

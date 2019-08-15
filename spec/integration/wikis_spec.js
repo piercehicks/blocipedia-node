@@ -14,7 +14,7 @@ describe("routes : wikis", () => {
         username: "tommychocolate",
         email: "chocolatetom@gmail.com",
         password: "123456789",
-        role: "standard"
+        role: "member"
       })
         .then(user => {
           this.user = user;

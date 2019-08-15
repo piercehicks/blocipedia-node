@@ -8,7 +8,7 @@ let users = [
     password: "bluebird",
     createdAt: new Date(),
     updatedAt: new Date(),
-    role: "standard"
+    role: "member"
    },
    {
     username: "yellow",
@@ -16,7 +16,7 @@ let users = [
     password: "yellowbird",
     createdAt: new Date(),
     updatedAt: new Date(),
-    role: "standard"
+    role: "member"
    },
    {
     username: "green",
@@ -24,7 +24,7 @@ let users = [
     password: "greenbird",
     createdAt: new Date(),
     updatedAt: new Date(),
-    role: "standard"
+    role: "member"
    }
  ];
 
