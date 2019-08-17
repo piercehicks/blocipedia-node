@@ -75,6 +75,7 @@ describe("routes : wikis", () => {
         form: {
           title: "New wiki",
           body: "New wiki body",
+          private: true,
           userId: this.user.id
         }
       };
@@ -208,4 +209,15 @@ describe("POST /wikis/:id/update", () => {
       });
     });
   });
+  describe("GET /wikis", () => {
+   it("should render the wiki index page", done => {
+     request.get(`${base}private`, (err, res, body) => {
+      expect(err).toBeNull();
+      expect(body).toContain("Wikis");
+      done();
+   })
+ })
+
+ })
+
 });

@@ -80,6 +80,16 @@ module.exports = {
     });
   },
 
+  privateIndex(req, res, next){
+  wikiQueries.getAllWikis((err, wikis) => {
+    if(err){
+      res.redirect(500, "static/index");
+    } else {
+      res.render("wikis/private", {wikis});
+    }
+  })
+},
+
   update(req, res, next) {
     wikiQueries.updateWiki(req, req.body, (err, wiki) => {
       if (err) {
