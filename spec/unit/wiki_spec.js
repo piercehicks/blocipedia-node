@@ -36,7 +36,8 @@ describe("Wiki", ()=>{
 		it("should create a wiki object and store it in the database",(done)=>{
 			Wiki.create({
 				title: "Created wiki",
-				body: "Created wiki description"
+				body: "Created wiki description",
+				userId: 1
 			})
 			.then((newWiki)=>{
 				expect(newWiki.title).toBe("Created wiki");

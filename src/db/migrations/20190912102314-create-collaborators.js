@@ -8,11 +8,25 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      email: {
-        type: Sequelize.STRING
+      userId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+       allowNull: false,
+       references: {
+         model: 'Users',
+         key: 'id',
+         as: 'userId'
+       }
       },
-      password: {
-        type: Sequelize.STRING
+      wikiId: {
+        type: Sequelize.INTEGER,
+        onDelete: 'CASCADE',
+       allowNull: false,
+       references: {
+         model: 'Wikis',
+         key: 'id',
+         as: 'wikiId'
+       }
       },
       createdAt: {
         allowNull: false,
